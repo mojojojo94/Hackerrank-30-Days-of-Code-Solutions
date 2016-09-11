@@ -1,0 +1,20 @@
+import Foundation
+// Enter your code here. Read input from STDIN. Print output to STDOUT
+
+let mealCost: Double = Double(readLine()!)!
+let tipPercent: Int = Int(readLine()!)!
+let taxPercent: Int = Int(readLine()!)!
+
+func tip() -> Double {
+  return mealCost * (Double(tipPercent) / 100)
+}
+
+func tax() -> Double {
+  return mealCost * (Double(taxPercent) / 100)
+}
+
+func totalCost() -> Int {
+  return lround(mealCost + tip() + tax())
+}
+
+print("The total meal cost is \(totalCost()) dollars.")
